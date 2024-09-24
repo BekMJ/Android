@@ -1,0 +1,11 @@
+<resources>
+    <color name="colorPrimary">#841617</color>
+    <color name="colorPrimaryDark">#801010</color>
+    <color name="colorAccent">#FF0000</color>
+    <color name="colorTitle">#FFFFFF</color>
+    <color name="textPrimary">#212121</color> <!-- Dark primary text color -->
+    <color name="textSecondary">#757575</color> <!-- Lighter secondary text color -->
+    <color name="backgroundLight">#F5F5F5</color> <!-- Light background -->
+    <color name="backgroundDark">#333333</color> <!-- Dark background for certain elements -->
+    <color name="buttonColor">#841617</color> <!-- Button background color matching the primary color -->
+</resources>
