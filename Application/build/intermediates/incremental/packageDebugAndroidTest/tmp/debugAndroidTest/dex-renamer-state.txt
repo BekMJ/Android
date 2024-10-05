@@ -1,0 +1,4 @@
+#Sat Oct 05 16:06:57 CDT 2024
+base.0=C\:\\Users\\askub\\OneDrive - University of Oklahoma\\COSensor\\Android\\Application\\build\\intermediates\\dex\\debugAndroidTest\\mergeDexDebugAndroidTest\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
