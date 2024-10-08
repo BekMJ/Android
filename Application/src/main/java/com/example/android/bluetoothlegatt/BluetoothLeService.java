@@ -191,11 +191,30 @@ public class BluetoothLeService extends Service {
         return rawPressure / 10.0f;
     }
     public int convertCOConcentration(byte[] rawData) {
-        // Combine the bytes into one value
+        // Ensure there is enough data
+        if (rawData == null || rawData.length < 2) {
+            return 0; // or handle error appropriately
+        }
+
+        // Combine the bytes into one value (assuming big-endian order)
         int rawCO = ((rawData[0] & 0xFF) << 8) | (rawData[1] & 0xFF);
 
-        return rawCO;
+        // Coefficients from the linear calibration
+        double slope = 2.21; // example value for 'm'
+        double intercept = 4.52222222; // example value for 'b'
+
+        // Apply the linear calibration equation
+        double calibratedCO = slope * rawCO + intercept;
+
+        // Ensure we don't return a negative concentration
+        if (calibratedCO < 0) {
+            return 0;
+        }
+
+        // Return the rounded value of the calculated concentration
+        return (int) Math.round(calibratedCO);
     }
+
 
 
 
